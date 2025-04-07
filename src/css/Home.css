@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.home-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  color: #262626;
+  padding-top: 20px;
+  background-color: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+
+.home-container h1,
+.home-container h3 {
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+/* Contenedor de los íconos */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive: Ajusta el tamaño en pantallas pequeñas */
+@media (max-width: 600px) {
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+}

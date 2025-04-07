@@ -1,0 +1,13 @@
+/* Que toda la app use 100vh y layout vertical */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Esta parte ocupa el espacio entre Navbar y Footer */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}

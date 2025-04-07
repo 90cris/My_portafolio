@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+  }
+
+  .navbar {
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #fff !important;
+  }
+  .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .logo {
+    /* margin-bottom: 20px; */
+    font-size: 28px;
+    font-weight: bold;
+    color: #262626;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 40px;
+  }
+  
+  .nav-links li a {
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #262626;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.5s;
+    z-index: 1;
+  }
+  
+  /* Animaciones con pseudo-elementos */
+  .nav-links li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid #262626;
+    border-bottom: 2px solid #262626;
+    transform: scaleY(2);
+    opacity: 0;
+    transition: 0.3s;
+  }
+  
+  .nav-links li a::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: 0.3s;
+    z-index: -1;
+  }
+  
+  .nav-links li a:hover {
+    color: #fff;
+  }
+  
+  .nav-links li a:hover::before {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  
+  .nav-links li a:hover::after {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  
+  /* Responsive: Apila los links verticalmente en móviles */
+  @media (max-width: 600px) {
+    .nav-links {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .logo {
+      font-size: 22px;
+    }
+  }
+  .nav-links li a.active {
+    color: #fff;
+    background-color: #262626;
+    border-top: 2px solid #262626;
+    border-bottom: 2px solid #262626;
+    z-index: 1;
+  }
