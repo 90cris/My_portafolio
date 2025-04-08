@@ -105,7 +105,8 @@
     }
   }
   .nav-links li a.active {
-    color: #fff;
+
+    color: gold;
     background-color: #262626;
     border-top: 2px solid #262626;
     border-bottom: 2px solid #262626;
