@@ -6,21 +6,24 @@ import { Projects } from "./pages/Projects";
 import { Contact } from "./pages/Contact";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
+import "./App.css";
 
 
 const App = () => {
   return (
     <Router>
-    <Navbar />
-    <div className="content">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </div>
-    <Footer />
+     <div className="app-container">
+        <Navbar />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
   </Router>
   );
 };

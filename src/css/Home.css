@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .home-container {
     text-align: center;
@@ -30,3 +31,126 @@
     }
   }
   
+=======
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.home-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  color: #262626;
+  padding-top: 20px;
+  background-color: #1e1e1e;
+  overflow: hidden;
+  text-align: center;
+}
+
+.home-container h1,
+.home-container h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Contenedor de los íconos */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+#github-icon {
+  width: 80px;
+  height: 80px;
+  filter: grayscale(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+#linkedin-icon {
+  width: 80px;
+  height: 80px;
+  filter: brightness(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+#github-icon:hover,
+#linkedin-icon:hover {
+  transform: scale(1.2);
+}
+
+
+/* Responsive: Ajusta el tamaño en pantallas pequeñas */
+@media (max-width: 600px) {
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Animaciones para Cristian y Gutiérrez */
+.nombre, .apellido {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(0);
+  animation-fill-mode: forwards;
+}
+
+.nombre {
+  animation: slideInLeft 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.apellido {
+  animation: slideInRight 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animación para el subtítulo */
+.subtitulo {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.4s; /* Espera a que termine Cristian + Gutiérrez */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+>>>>>>> gh-pages

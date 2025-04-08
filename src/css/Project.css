@@ -1,0 +1,172 @@
+.Contenedor-card {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.icon-fa-desktop {
+  color: #262626;
+}
+
+.titulo-proyecto {
+  color: #111;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 5px 0 10px 0;
+}
+
+.titulo-proyecto span {
+  font-weight: normal;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.icon {
+  width: 300px !important;
+  height: 300px !important;
+}
+.Nat-img{
+  width: 300px !important;
+  height: 300px !important;
+}
+
+
+.card-img
+ {
+  height: 300px ;
+  /* object-fit: cover; */
+  background-color: #fff;
+}
+.titulo-proyecto span {
+  font-weight: normal;
+  font-size: 1.2rem;
+  color: rgb(37, 118, 164);
+}
+
+#next,
+#prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gold;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#prev {
+  left: 20px;
+}
+
+#next {
+  right: 20px;
+}
+
+#next:hover,
+#prev:hover {
+  transform: translateY(-50%) scale(1.3) rotate(10deg);
+  color: #ffd700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+.border-wrapper {
+  position: relative;
+  border-radius: 2px;
+  padding: 5px; /* simula el grosor del borde */
+  background: transparent;
+  z-index: 0;
+}
+
+.border-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px; 
+  border-radius: 12px;
+  background: linear-gradient(45deg, gold, black);
+  background-size: 400% 400%;
+  animation: borderAnimation 4s linear infinite;
+  z-index: -1;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+}
+
+@keyframes borderAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+  }
+}
+
+.border-wrapper:hover::before {
+  animation-play-state: paused;
+}
+
+
+.item {
+  width: 330px;
+  height: 380px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item:hover {
+  transform: scale(1.05);
+}
+
+.projects-container {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: #1e1e1e;
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  position: relative;
+  
+}
+
+.project-slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+  .item {
+    width: 100%;
+  }
+}
