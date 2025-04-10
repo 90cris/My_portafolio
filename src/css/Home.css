@@ -1,22 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body,
-html {
-  height: 100%;
-  
-}
-
 .home-container {
-  flex: 1;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 100%;
+  /* height: 100%; */
   color: #262626;
   padding-top: 20px;
   background-color: #1e1e1e;

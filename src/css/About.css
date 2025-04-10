@@ -1,14 +1,12 @@
-
 .backgound-About {
   display: flex;
   justify-content: center;
   align-items: start;
   background-color: #262626;
-  min-height: 100vh;
-  width: 100%;
+  /* min-height: 100vh;
+  width: 100%; */
   overflow-x: hidden;
   overflow-y: hidden;
-
 }
 
 .container-About {
@@ -38,4 +36,28 @@
 .text-3{
 
     text-align: justify;
+  }
+  @media (max-width: 768px) {
+    .backgound-About {
+      align-items: flex-start; /* El contenido se alinea arriba */
+    }
+  
+    .container-About {
+      justify-content: flex-start;
+      margin-top: 20px;
+      width: 90%; /* más ancho para mobile */
+      text-align: left;
+    }
+  }
+  @media (max-width: 912px) {
+    .backgound-About {
+      align-items: flex-start; /* El contenido se alinea arriba */
+    }
+  
+    .container-About {
+      justify-content: flex-start;
+      margin-top: 20px;
+      width: 90%; /* más ancho para mobile */
+      text-align: left;
+    }
   }

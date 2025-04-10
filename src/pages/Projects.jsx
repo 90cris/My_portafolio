@@ -3,6 +3,7 @@ import "../css/Project.css";
 import sofappImg from "../assets/sofapp-logo.svg";
 import natImg from "../assets/logo_final.png";
 import cssImg from "../assets/css.png";
+import boot from "../assets/Bootstrap_logo.svg.png";
 import htmlImg from "../assets/html.png";
 import reactImg from "../assets/react.png";
 import expressImg from "../assets/express-js.png";
@@ -60,6 +61,7 @@ export const Projects = () => {
           { src: htmlImg, label: "HTML" },
           { src: cssImg, label: "CSS" },
           { src: reactImg, label: "React" },
+          { src: boot, label: "bootstrap" },
         ];
       case "BACKEND":
         return [
