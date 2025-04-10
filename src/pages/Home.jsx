@@ -1,15 +1,17 @@
 import React from "react";
 import "../css/Home.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 export const Home = () => {
   return (
     <div className="home-container">
- <h1>
-  <span className="nombre">¡Cristian </span>
-  <span > </span>
-  <span className="apellido">Gutiérrez!</span>
-</h1>
-<h3 className="subtitulo">Developer Full Stack</h3>
+      <h1>
+        <span className="nombre">¡Cristian </span>
+        <span> </span>
+        <span className="apellido">Gutiérrez!</span>
+      </h1>
+      <h3 className="subtitulo">Developer Full Stack</h3>
       <div className="social-icons">
         {/* Ícono de GitHub */}
         <a
@@ -38,6 +40,17 @@ export const Home = () => {
             // className="icon"
           />
         </a>
+      </div>
+      <div className="cv-button-wrapper fade-in-animation">
+        <div className="border-wrapper">
+          <a
+            href="/cv.pdf" // Asegúrate de que este archivo exista en la carpeta /public
+            className="cv-button"
+            download
+          >
+            <FontAwesomeIcon icon={faFileArrowDown} /> Descargar CV
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -7,6 +7,7 @@
 body,
 html {
   height: 100%;
+  
 }
 
 .home-container {
@@ -80,6 +81,62 @@ html {
 .apellido {
   animation: slideInRight 1s ease-out forwards;
   animation-delay: 0.3s;
+}
+.cv-button-wrapper {
+  margin-top: 30px;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.6s;
+  opacity: 0;
+}
+
+.cv-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.cv-button:hover {
+  transform: scale(1.05);
+}
+
+/* Animación de borde */
+.border-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 2px;
+  border-radius: 12px;
+  background: transparent;
+}
+
+.border-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: linear-gradient(45deg, gold, black);
+  background-size: 400% 400%;
+  animation: borderAnimation 4s linear infinite;
+  z-index: -1;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+}
+
+.border-wrapper:hover::before {
+  animation-play-state: paused;
+  
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
 @keyframes slideInLeft {

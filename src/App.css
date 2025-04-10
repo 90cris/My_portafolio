@@ -1,13 +1,40 @@
-/* Que toda la app use 100vh y layout vertical */
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+ #root { 
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-/* Esta parte ocupa el espacio entre Navbar y Footer */
+.app-container{
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  
+}
+/* html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #262626;
+}
+body {
+  font-family: sans-serif;
+  background-color: #1e1e1e; 
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: #262626;
+}
+
 .content {
   flex: 1;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
+ */

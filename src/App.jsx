@@ -8,23 +8,22 @@ import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import "./App.css";
 
-
 const App = () => {
   return (
-    <Router>
-     <div className="app-container">
+    <div className="app-container">
+      <Router>
         <Navbar />
-        <div className="content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </div>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+
         <Footer />
-      </div>
-  </Router>
+      </Router>
+    </div>
   );
 };
 

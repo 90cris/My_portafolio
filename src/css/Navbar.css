@@ -23,11 +23,12 @@
     margin: 0 auto;
     padding: 0 20px;
   }
-  .logo {
+  .logo-nav {
     /* margin-bottom: 20px; */
     font-size: 28px;
     font-weight: bold;
     color: #262626;
+    font-family: 'Times New Roman', Times, serif;
   }
   
   .nav-links {
@@ -107,6 +108,7 @@
   .nav-links li a.active {
 
     color: gold;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
     background-color: #262626;
     border-top: 2px solid #262626;
     border-bottom: 2px solid #262626;

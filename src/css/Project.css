@@ -1,3 +1,39 @@
+.projects-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: #1e1e1e;
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.slider-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.project-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100%;
+  position: relative;
+}
+.slider .item {
+  /* position: absolute; */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
 .Contenedor-card {
   width: 100%;
   height: 100%;
@@ -44,15 +80,13 @@
   width: 300px !important;
   height: 300px !important;
 }
-.Nat-img{
+.Nat-img {
   width: 300px !important;
   height: 300px !important;
 }
 
-
-.card-img
- {
-  height: 300px ;
+.card-img {
+  height: 300px;
   /* object-fit: cover; */
   background-color: #fff;
 }
@@ -64,9 +98,10 @@
 
 #next,
 #prev {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+
+  position: relative;
+  top: auto;
+  transform: none;
   color: gold;
   background-color: transparent;
   border: none;
@@ -86,14 +121,14 @@
 
 #next:hover,
 #prev:hover {
-  transform: translateY(-50%) scale(1.3) rotate(10deg);
+  transform: translateY(0) scale(1.1);
   color: #ffd700;
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 .border-wrapper {
   position: relative;
   border-radius: 2px;
-  padding: 5px; /* simula el grosor del borde */
+  padding: 5px; 
   background: transparent;
   z-index: 0;
 }
@@ -102,15 +137,13 @@
   content: "";
   position: absolute;
   inset: 0;
-  padding: 2px; 
+  padding: 2px;
   border-radius: 12px;
   background: linear-gradient(45deg, gold, black);
   background-size: 400% 400%;
   animation: borderAnimation 4s linear infinite;
   z-index: -1;
-  mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   -webkit-mask-composite: destination-out;
 }
@@ -128,7 +161,6 @@
   animation-play-state: paused;
 }
 
-
 .item {
   width: 330px;
   height: 380px;
@@ -136,7 +168,10 @@
   overflow: hidden;
   background-color: #333;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease;
+ 
+  /* filter: blur(2px); */
+  transform: scale(0.95);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,29 +179,214 @@
 .item:hover {
   transform: scale(1.05);
 }
+.item.active-card {
+  opacity: 1;
+  filter: none;
+  transform: scale(1);
+  z-index: 1;
+}
 
-.projects-container {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  background-color: #1e1e1e;
-  color: white;
+.item.inactive-card {
+  z-index: 0;
+}
+.projects-tecnology {
+  margin-top: 20px;
   text-align: center;
-  min-height: 100vh;
-  position: relative;
-  
 }
-
-.project-slider {
+.tech-box {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
-@media (max-width: 600px) {
+.tech-label {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  text-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
+  text-shadow: -1px -1px 5px black, 2px -1px 5px black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.radio-group input[type="radio"] {
+  accent-color: gold;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.radio-group label {
+  font-weight: bold;
+  color: #f6e27a;
+  cursor: pointer;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+.tech-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tech-icon {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+@keyframes fadeOutScale {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+.fade-out {
+  animation: fadeOutScale 0.1s ease-out;
+}
+
+.fade-in {
+  animation: fadeInScale 0.1s ease-in;
+}
+
+/* Animación de entrada (aparece con scale) */
+@keyframes fadeInScale {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeInScale 1s ease-in-out forwards;
+}
+
+/* titulo tecnologia */
+.tech-title-wrapper {
+  width: 100%;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 10px;
+  position: relative;
+}
+
+.tech-title {
+  color: transparent;
+  position: relative;
+  font-size: 50px;
+  font-family: "Times New Roman", serif;
+  letter-spacing: 10px !important;
+  font-weight: bold;
+  background-image: linear-gradient(
+    to right,
+    #462523 0%,
+    #cb9b51 22%,
+    #f6e27a 45%,
+    #f6f2c0 50%,
+    #f6e27a 55%,
+    #cb9b51 78%,
+    #462523 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+  word-break: break-word;
+}
+
+
+@media (max-width: 360px) {
+  .tech-title {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+}
+@media (max-width: 431px) {
+  .slider-wrapper {
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  .project-slider {
+    width: auto;
+  }
+
   .item {
-    width: 100%;
+    position: relative;
+    width: 180px;
+    height: 230px;
+  }
+
+  .card-img,
+  .icon {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .Contenedor-card {
+    width: 180px;
+    height: auto;
+  }
+
+  #next,
+  #prev {
+    width: 35px;
+    height: 45px;
+    font-size: 1.5rem;
+  }
+  .tech-title {
+    font-size: 40px;
+    letter-spacing: 0.1px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .tech-title {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 541px) {
+  .tech-title {
+    font-size: 40px;
+    letter-spacing: 0.1px
+  }
+}
+@media (max-width: 850px) {
+  .radio-group label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.9rem;
+  }
+
+  .radio-group input[type="radio"] {
+    margin-right: 0; 
+  }
+}
+@media (max-width: 431px) {
+  .tech-title {
+    font-size: 40px;
+    letter-spacing: 0.1px !important;
   }
 }

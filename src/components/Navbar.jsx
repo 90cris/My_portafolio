@@ -6,7 +6,7 @@ export const Navbar = () => {
   return (
     <nav className="navbar">
     <div className="navbar-content">
-      <h1 className="logo">Sr. Gutiérrez</h1>
+      <h1 className="logo-nav">Sr. Gutiérrez</h1>
       <ul className="nav-links">
         <li>
           <NavLink to="/" end className={({ isActive }) => isActive ? "active" : ""}>Inicio</NavLink>
