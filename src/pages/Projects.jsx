@@ -105,7 +105,7 @@ export const Projects = () => {
       {
         title: "Portafolio",
         icon: <FontAwesomeIcon icon={faDesktop} size="4x" className="icon icon-fa-desktop" />,
-        link: "https://www.google.cl",
+        link: "https://cristian-gutierrez-portafolio.onrender.com/",
         className: "",
       },
     ]

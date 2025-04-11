@@ -1,14 +1,12 @@
-
 .backgound-About {
   display: flex;
   justify-content: center;
   align-items: start;
   background-color: #262626;
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
-
 }
 
 .container-About {
@@ -26,16 +24,20 @@
   box-sizing: border-box;
 }
 
-
 .text-1 {
-
   text-align: justify;
 }
-.text-2{
-
+.text-2 {
   text-align: justify;
 }
-.text-3{
-
-    text-align: justify;
+.text-3 {
+  text-align: justify;
+}
+@media (max-width: 768px) {
+  .container-About {
+    justify-content: start;
+    align-items: start;
+    height: 100%;
+    width: 80%;
   }
+}

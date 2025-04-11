@@ -6,11 +6,12 @@ body, html {
 }
 .container-Contact {
   min-height: calc(100vh - 74px); /* ajusta si el navbar y footer ocupan aprox. 80px en total */
-  padding: 40px 20px 20px;
+  padding: 40px 20px 0px 20px;
   box-sizing: border-box;
   color: #fff;
   background-color: #1e1e1e;
   text-align: center;
+  height: 100%;
   width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
