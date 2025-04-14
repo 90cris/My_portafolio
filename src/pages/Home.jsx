@@ -18,6 +18,7 @@ export const Home = () => {
           href="https://github.com/90cris"
           target="_blank"
           rel="noopener noreferrer"
+              className="icon-wrapper github-wrapper"
         >
           <img
             src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
@@ -32,6 +33,7 @@ export const Home = () => {
           href="https://www.linkedin.com/in/cristian-guti%C3%A9rrez-gonz%C3%A1lez/"
           target="_blank"
           rel="noopener noreferrer"
+            className="icon-wrapper linkedin-wrapper"
         >
           <img
             src="https://cdn-icons-png.flaticon.com/512/174/174857.png"

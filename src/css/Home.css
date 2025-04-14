@@ -51,10 +51,6 @@ html {
   filter: brightness(1.2);
   transition: transform 0.3s ease-in-out;
 }
-#github-icon:hover,
-#linkedin-icon:hover {
-  transform: scale(1.2);
-}
 
 
 /* Responsive: Ajusta el tamaño en pantallas pequeñas */
@@ -138,6 +134,64 @@ html {
   
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
+.icon-wrapper {
+  position: relative;
+  width: 78px;
+  height: 78px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.github-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 79px;
+  height: 78px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: auto; 
+}
+
+
+.linkedin-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 77px;
+  height: 77px;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 0;
+}
+
+#github-icon,
+#linkedin-icon {
+  position: relative;
+  z-index: 1; /* Para que se vea sobre el fondo blanco */
+  transition: transform 0.3s ease-in-out;
+}
+.github-wrapper:hover #github-icon {
+  transform: scale(1.2);
+}
+
+.linkedin-wrapper:hover #linkedin-icon {
+  transform: scale(1.2);
+}
+.github-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; /* opcional para feedback visual */
+}
+
+.github-wrapper:hover img {
+  transform: scale(1.2);
+} 
 
 @keyframes slideInLeft {
   from {
