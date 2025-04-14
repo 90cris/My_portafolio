@@ -3,6 +3,8 @@ import "../css/Home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 
+
+
 export const Home = () => {
   return (
     <div className="home-container">
@@ -46,10 +48,10 @@ export const Home = () => {
       <div className="cv-button-wrapper fade-in-animation">
         <div className="border-wrapper">
           <a
-            href="/cv.pdf" // Asegúrate de que este archivo exista en la carpeta /public
+            href="/Cristian_Gutierrez_FullStack.pdf" 
             className="cv-button"
             download
-          >
+          > 
             <FontAwesomeIcon icon={faFileArrowDown} /> Descargar CV
           </a>
         </div>
