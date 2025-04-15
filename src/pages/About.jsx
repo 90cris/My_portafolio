@@ -13,7 +13,7 @@ export const About = () => {
         <p className="text-2">
           Me apasiona el deporte, la música, la tecnología y la programación,
           buscando siempre aprender y mejorar mis habilidades, soy una persona
-          responsable, puntual, respetuoso y con excelente relaciones
+          responsable, respetuoso y con excelente relaciones
           personales, buen compañero de trabajo.
         </p>
         <p className="text-3">
