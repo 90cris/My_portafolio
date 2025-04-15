@@ -74,6 +74,7 @@ export const Contact = () => {
         {successMessage && <p style={{ color: "gold", fontWeight: "bold" }}>{successMessage}</p>}
 
         {/* Formulario */}
+        <h2 className="form-title">Escríbeme algo</h2>
         <form className="contact-form" onSubmit={handleSubmit}>
           <input
             type="text"
