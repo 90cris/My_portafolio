@@ -11,7 +11,7 @@ export const About = () => {
           titulado en la Universidad Tecnológica INACAP Talca.
         </p>
         <p className="text-2">
-          Me apasiona el deporte, la musica, la tecnología y la programacion,
+          Me apasiona el deporte, la música, la tecnología y la programación,
           buscando siempre aprender y mejorar mis habilidades, soy una persona
           responsable, puntual, respetuoso y con excelente relaciones
           personales, buen compañero de trabajo.
