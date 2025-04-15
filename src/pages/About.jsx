@@ -17,7 +17,7 @@ export const About = () => {
           personales, buen compañero de trabajo.
         </p>
         <p className="text-3">
-          En cuanto a desarrollo web tengo conocimientos en Ecommerce,
+          En cuanto a desarrollo web tengo experiencia en Ecommerce,
           Autenticación, API Rest, cuento con la disponibilidad de trabajar
           tanto en FrontEnd como en BackEnd.
         </p>
