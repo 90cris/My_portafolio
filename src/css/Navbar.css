@@ -169,6 +169,10 @@ body {
     padding: 40px 0;
     z-index: 5;
     pointer-events: auto;
+      /* NUEVOS AJUSTES */
+      max-height: calc(100dvh - 60px - 36.8px); 
+      overflow-y: auto;
+
   }
   .nav__item{
     font-size: 20px;
@@ -227,3 +231,4 @@ body {
     padding: 10px 10px; /* Un poco menos de margen lateral */
   }
 }
+
