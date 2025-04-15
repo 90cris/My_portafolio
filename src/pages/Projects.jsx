@@ -12,6 +12,7 @@ import pgImg from "../assets/pgadmin-icon-2048x2048-rxk8ydpt.png";
 import sqlserverImg from "../assets/sqlserver2-logo-500x236.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDesktop } from "@fortawesome/free-solid-svg-icons";
+import boot from "../assets/Bootstrap_logo.png";
 
 export const Projects = () => {
   const [active, setActive] = useState(1);
@@ -60,6 +61,7 @@ export const Projects = () => {
           { src: htmlImg, label: "HTML" },
           { src: cssImg, label: "CSS" },
           { src: reactImg, label: "React" },
+          { src: boot, label: "bootstrap" },
         ];
       case "BACKEND":
         return [

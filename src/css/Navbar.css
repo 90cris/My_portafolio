@@ -8,22 +8,34 @@ body {
   font-family: sans-serif;
 }
 
+/* ---------- NAVBAR GENERAL ---------- */
 .nav {
   --state-close: scale(0);
   --state-hamburguer: scale(1);
-  --state-menu: translateY(-150%);
+  --state-menu: translateY(-550%);
+  --state-opacity: 0;
   background-color: #fff;
   position: sticky;
   top: 0;
   z-index: 100;
+  transition: all 0.4s ease;
 }
 
-.nav:target {
+.nav.is-open {
   --state-close: scale(1);
   --state-hamburguer: scale(0);
   --state-menu: translateY(0);
+  --state-opacity: 1;
 }
 
+.nav.is-closing {
+  --state-close: scale(0);
+  --state-hamburguer: scale(1);
+  --state-menu: translateY(-550%);
+  --state-opacity: 0;
+}
+
+/* ---------- CONTENIDO DEL NAV ---------- */
 .navbar-content {
   display: flex;
   justify-content: space-between;
@@ -41,7 +53,7 @@ body {
   z-index: 10;
 }
 
-/* ÍCONOS DE MENÚ */
+/* ---------- ICONOS MENÚ ---------- */
 .nav__icon {
   position: absolute;
   top: 20px;
@@ -49,7 +61,7 @@ body {
   display: none;
   cursor: pointer;
   font-size: 1.8rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
   z-index: 20;
 }
 
@@ -59,9 +71,10 @@ body {
 
 .nav__close {
   transform: var(--state-close);
+  color: #000 !important; /* Ícono negro */
 }
 
-/* NAV LINKS DESKTOP */
+/* ---------- NAV LINKS DESKTOP ---------- */
 .nav-links {
   display: flex;
   list-style: none;
@@ -127,18 +140,17 @@ body {
   border-bottom: 2px solid #262626;
 }
 
-/* ======== MOBILE ========= */
+/* ---------- MOBILE (MAX-WIDTH: 768PX) ---------- */
 @media (max-width: 768px) {
   .nav__icon {
     display: block;
-    /* z-index: 20; */
+    padding-bottom: 20px !important;
   }
 
   .navbar-content {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 10px 20px;
     padding: 10px 20px;
     position: relative;
   }
@@ -152,37 +164,36 @@ body {
     left: 0;
     right: 0;
     transform: var(--state-menu);
-    transition: transform 0.4s ease;
+    opacity: var(--state-opacity);
+    transition: transform 0.4s ease, opacity 0.4s ease;
     padding: 40px 0;
     z-index: 5;
+    pointer-events: auto;
+  }
+  .nav__item{
+    font-size: 20px;
+  }
+  .nav.is-closing .nav-links {
+    pointer-events: none;
   }
 
-  .nav {
-    --state-close: scale(0);
-    --state-hamburguer: scale(1);
-    --state-menu: translateY(-550%);
-    background-color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  
-  /* Si el menú está abierto (por target o React) */
-  .nav:target,
-  .nav.is-open {
-    --state-close: scale(1);
-    --state-hamburguer: scale(0);
-    --state-menu: translateY(0);
-  }
-  
   .nav__link {
     color: white;
+    background-color: black !important;
+    border-radius: 5px;
+    font-size: 20px;
   }
+
   .logo-nav {
+    padding-top: 5px;
     color: rgba(0, 0, 0, 0.992);
+  }
+  .nav{
+    height: 60px !important;
   }
 }
 
+/* ---------- TABLET (MAX-WIDTH: 1024PX) ---------- */
 @media (max-width: 1024px) {
   .nav {
     height: 90px;
@@ -198,6 +209,21 @@ body {
   }
 
   .nav__link {
-    line-height: 90px; /* Centrado vertical del texto */
+    line-height: 90px;
+  }
+}
+/* ---------- AJUSTES ENTRE 769px Y 832px ---------- */
+@media (min-width: 769px) and (max-width: 832px) {
+  .nav-links {
+    gap: 20px; /* Reduce el espacio entre los enlaces */
+  }
+
+  .nav__link {
+    padding: 5px 10px; /* Menos padding horizontal */
+    font-size: 16px;   /* Tamaño más compacto si es necesario */
+  }
+
+  .navbar-content {
+    padding: 10px 10px; /* Un poco menos de margen lateral */
   }
 }

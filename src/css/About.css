@@ -33,11 +33,27 @@
 .text-3 {
   text-align: justify;
 }
+
+.about-photo {
+  width: 40%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
 @media (max-width: 768px) {
   .container-About {
     justify-content: start;
     align-items: start;
     height: 100%;
     width: 80%;
+  }
+  .about-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    object-fit: cover;
+    align-self: center;
   }
 }

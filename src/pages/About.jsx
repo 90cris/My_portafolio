@@ -1,9 +1,11 @@
 import React from "react";
 import "../css/About.css";
+import cris from "../assets/cris.jpeg";
 export const About = () => {
   return (
     <div className="backgound-About">
       <div className="container-About">
+      <img src={cris} alt="Cristian Gutiérrez" className="about-photo" />
         <p className="text-1">
           Soy Desarrollador web Full Stack y Técnico Analista Programador
           titulado en la Universidad Tecnológica INACAP Talca.
