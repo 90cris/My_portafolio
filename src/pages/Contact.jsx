@@ -9,7 +9,7 @@ export const Contact = () => {
   const [formData, setFormData] = useState({
     from_name: "",
     from_email: "",
-    message: ""
+    message: "",
   });
   const [successMessage, setSuccessMessage] = useState("");
 
@@ -17,7 +17,7 @@ export const Contact = () => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -25,18 +25,19 @@ export const Contact = () => {
     e.preventDefault();
 
     // ENVÍA el formulario usando EmailJS
-    emailjs.send(
-      "service_hnndige-cristian",     
-      "template_rtvivtu", 
-      formData,
-      "Nwo7MFz8axXeyv0VT"
-    )
+    emailjs
+      .send(
+        "service_hnndige-cristian",
+        "template_rtvivtu",
+        formData,
+        "Nwo7MFz8axXeyv0VT"
+      )
       .then(() => {
         setSuccessMessage("¡Gracias por tu comentario! ✨");
         setFormData({
           from_name: "",
           from_email: "",
-          message: ""
+          message: "",
         });
         setTimeout(() => setSuccessMessage(""), 5000);
       })
@@ -48,11 +49,21 @@ export const Contact = () => {
 
   return (
     <div className="container-Contact">
+      <div className="circulo2 xxlarge1 sombra10"></div>
+      <div className="circulo2 xlarge1 sombra20"></div>
+      <div className="circulo2 large1 sombra30"></div>
+      <div className="circul2 medium1 sombra40"></div>
+      <div className="circulo2 small1 sombra50"></div>
+      <div className="circulo2 minium1 sombra60"></div>
       <div className="contact-content">
-
         {/* Botones de redes */}
         <div className="contact-buttons">
-          <a href="https://wa.me/56944493577" target="_blank" rel="noopener noreferrer" className="btn-icon">
+          <a
+            href="https://wa.me/56944493577"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-icon"
+          >
             <FontAwesomeIcon icon={faWhatsapp} style={{ color: "#24b021" }} />
             <span>WhatsApp</span>
           </a>
@@ -60,18 +71,38 @@ export const Contact = () => {
             <FontAwesomeIcon icon={faEnvelope} style={{ color: "#cb1515" }} />
             <span>Gmail</span>
           </a>
-          <a href="https://github.com/90cris" target="_blank" rel="noopener noreferrer" className="btn-icon">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" className="icon-img" />
+          <a
+            href="https://github.com/90cris"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-icon"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+              alt="GitHub"
+              className="icon-img"
+            />
             <span>GitHub</span>
           </a>
-          <a href="https://www.linkedin.com/in/cristian-guti%C3%A9rrez-gonz%C3%A1lez/" target="_blank" rel="noopener noreferrer" className="btn-icon">
-            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" className="icon-img" />
+          <a
+            href="https://www.linkedin.com/in/cristian-guti%C3%A9rrez-gonz%C3%A1lez/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-icon"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+              alt="LinkedIn"
+              className="icon-img"
+            />
             <span>LinkedIn</span>
           </a>
         </div>
 
         {/* Mensaje de éxito */}
-        {successMessage && <p style={{ color: "gold", fontWeight: "bold" }}>{successMessage}</p>}
+        {successMessage && (
+          <p style={{ color: "gold", fontWeight: "bold" }}>{successMessage}</p>
+        )}
 
         {/* Formulario */}
         <h2 className="form-title">Escríbeme algo</h2>
@@ -106,4 +137,3 @@ export const Contact = () => {
     </div>
   );
 };
-

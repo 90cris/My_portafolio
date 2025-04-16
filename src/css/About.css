@@ -1,4 +1,5 @@
 .backgound-About {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -8,13 +9,113 @@
   overflow-x: hidden;
   overflow-y: hidden;
 }
+.backgound-About {
+  background: linear-gradient(45deg, #1e1e1e, #262626, #1e1e1e, #262626);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
 
+
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* .circulo{
+position: absolute;
+border-radius: 50%;
+background: #262626;
+animation: ripple 15s infinite;
+animation-delay: 0s;
+box-shadow: 0px 0px 0px 0px  rgba(117, 114, 97, 0.5);
+}
+
+.medium{
+  width: 600px;
+  height: 600px;
+  left: -300px;
+  bottom: -300px; 
+}
+.large{
+  width: 800px;
+  height: 800px;
+  left: -400px;
+  bottom: -400px; 
+}
+.xlarge{
+  width: 1000px;
+  height: 1000px;
+  left: -500px;
+  bottom: -500px; 
+}
+.xxlarge{
+  width: 1200px;
+  height: 1200px;
+  left: -600px;
+  bottom: -600px; 
+}
+.small{
+  width: 1400px;
+  height: 1400px;
+  left: -700px;
+  bottom: -700px; 
+}
+.minium{
+  width: 1600px;
+  height: 1600px;
+  left: -800px;
+  bottom: -800px; 
+}
+.sombra1{
+opacity: 0.2;
+}
+.sombra2{
+  opacity: 0.3;
+}
+.sombra3{
+  opacity: 0.4;
+}
+.sombra4{
+  opacity: 0.5;
+}
+.sombra5{
+  opacity: 0.6;
+}
+.sombra6{
+  opacity: 0.7;
+}
+
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+    box-shadow: 0px 0px 0px 0px rgba(117, 114, 97, 0.5);
+    opacity: 0.2; 
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 0px 20px rgba(117, 114, 97, 0.5);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.8);
+    box-shadow: 0px 0px 0px 40px rgba(117, 114, 97, 0.5);
+    opacity: 0;
+  }
+} */
 .container-About {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: #262626;
+  /* background-color: #262626; */
   color: #fff;
   justify-content: center; /* centrado vertical total */
   padding: 20px;
@@ -57,3 +158,42 @@
     align-self: center;
   }
 }
+  /* .minium{
+    width: 400px;
+    height: 400px;
+    left: -200px;
+    bottom: -200px;
+  }
+  .small{
+    width: 500px;
+    height: 500px;
+    left: -250px;
+    bottom: -250px;
+  }
+  .medium{
+    width: 600px;
+    height: 600px;
+    left: -300px;
+    bottom: -300px;
+  }
+  .large{
+    width: 700px;
+    height: 700px;
+    left: -350px;
+    bottom: -350px; 
+  }
+  .xlarge{
+    width: 800px;
+    height: 800px;
+    left: -400px;
+    bottom: -400px; 
+  }
+  .xxlarge{
+    width: 900px;
+    height: 900px;
+    left: -450px;
+    bottom: -450px; 
+  }
+
+   */
+

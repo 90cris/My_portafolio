@@ -13,6 +13,29 @@
   position: relative;
 }
 
+.projects-container{
+  background: linear-gradient(-45deg, #1e1e1e, #262626, #1e1e1e, #262626);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+
+
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hidden-button {
+  visibility: hidden;
+  pointer-events: none;
+}
 .slider-wrapper {
   display: flex;
   justify-content: center;
@@ -281,7 +304,7 @@
 /* titulo tecnologia */
 .tech-title-wrapper {
   width: 100%;
-  background-color: #1e1e1e;
+  background-color: none;
   display: flex;
   justify-content: center;
   align-items: center;
