@@ -29,7 +29,7 @@ export const Projects = () => {
     {
       title: "Sofapp",
       image: sofappImg,
-      link: "https://sofapp.onrender.com",
+      link: "https://frontend-sofapp-proyecto.vercel.app/",
       className: "",
     },
     {
