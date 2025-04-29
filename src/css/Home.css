@@ -168,7 +168,7 @@ html {
   position: absolute;
   width: 79px;
   height: 77px;
-  background-color: #fff;
+  /* background-color: #fff; */
   border-radius: 50%;
   z-index: 0;
   pointer-events: auto; 
