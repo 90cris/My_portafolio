@@ -9,6 +9,7 @@ import expressImg from "../assets/express-js.png";
 import nodeImg from "../assets/node.png";
 import jsImg from "../assets/javascript.png";
 import pgImg from "../assets/pgadmin-icon-2048x2048-rxk8ydpt.png";
+import TyScp from "../assets/typescript.png";
 import sqlserverImg from "../assets/sqlserver2-logo-500x236.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDesktop } from "@fortawesome/free-solid-svg-icons";
@@ -56,7 +57,9 @@ export const Projects = () => {
           { src: nodeImg, label: "Node Js" },
         ];
       case "LENGUAJES":
-        return [{ src: jsImg, label: "JavaScript" }];
+        return [{ src: jsImg, label: "JavaScript" },
+          { src: TyScp, label: "TypeScript" }
+        ];
       case "BASE DE DATOS":
         return [
           { src: pgImg, label: "PGAdmin" },
